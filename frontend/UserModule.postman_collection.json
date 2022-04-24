@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "03df69a5-047d-459b-ae73-679f6e796ad9",
+		"name": "UserModule",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v2/users",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v2",
+						"users"
+					]
+				},
+				"description": "localhost:4000/api/v2/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Yogesh\",\r\n    \"lastName\": \"Mahale\",\r\n    \"email\": \"mahale.yogesh4@gmail.com\",\r\n    \"phone\": \"7385920079\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v2/users",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v2",
+						"users"
+					]
+				},
+				"description": "localhost:4000/api/v2/users"
+			},
+			"response": []
+		},
+		{
+			"name": "View user by email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/api/v2/users/mahale.yogesh4@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v2",
+						"users",
+						"mahale.yogesh4@gmail.com"
+					]
+				},
+				"description": "localhost:4000/api/v2/users/mahale.yogesh4@gmail.com"
+			},
+			"response": []
+		},
+		{
+			"name": "Update user details",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Yog\",\r\n    \"lastName\": \"Mahale\",\r\n    \"email\": \"mahale.yogesh44@gmail.com\",\r\n    \"phone\": \"4646\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v2/users/mahale.yogesh4@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v2",
+						"users",
+						"mahale.yogesh4@gmail.com"
+					]
+				},
+				"description": "localhost:4000/api/v2/users/mahale.yogesh4@gmail.com"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/api/v2/users/mahale.yogesh4@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v2",
+						"users",
+						"mahale.yogesh4@gmail.com"
+					]
+				},
+				"description": "localhost:4000/api/v2/users/mahale.yogesh4@gmail.com"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,34 @@
+<section class="row form-group">
+  <div class="col-6">
+    <h3>Users</h3>
+  </div>
+  <div class="col-6 text-right">
+    <a class="btn btn-primary" [routerLink]="['/users/add']">Add User</a>
+  </div>
+</section>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Email</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of users; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ item.email }}</td>
+      <td>{{ item.firstName }}</td>
+      <td>{{ item.lastName }}</td>
+      <td>{{ item.phone }}</td>
+      <td>
+        <a class="btn btn-sm btn-secondary mr-1" [routerLink]="['/users/view/'+ item.email]">View</a>
+        <a class="btn btn-sm btn-primary mr-1" [routerLink]="['/users/edit/'+ item.email]">Edit</a>
+        <a class="btn btn-sm btn-danger" (click)="deleteUser(item.email)">Delete</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

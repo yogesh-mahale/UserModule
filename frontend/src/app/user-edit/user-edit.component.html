@@ -1,0 +1,34 @@
+
+
+<div class="card shadow">
+  <div class="card-body">
+    <h3>
+      Edit User
+    </h3>
+    <hr>
+    <form [formGroup]="userForm">
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" formControlName="email">
+      </div>
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" placeholder="" formControlName="firstName">
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" placeholder="" formControlName="lastName">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" id="phone" placeholder="" formControlName="phone">
+      </div>
+      <div class="form-group text-right">
+        <hr>
+        <button class="btn btn-primary" (click)="submitForm()">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
